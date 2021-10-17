@@ -4,7 +4,7 @@ import { CITY_QUERY } from "./queries";
 
 export default function WeatherCard({ cityParameter }) {
   const { loading, error, data } = useQuery(CITY_QUERY, {
-    variables: { name: cityParameter.name },
+    variables: { name: cityParameter.label },
   });
 
   if (loading) return <p>loading</p>;
