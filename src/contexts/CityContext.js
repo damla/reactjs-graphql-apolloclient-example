@@ -1,5 +1,7 @@
 import { createContext, useState, useContext } from "react";
+// import cities constant data which has id and name pairs
 import { data } from "../utils/cities";
+import { getRandom } from "../utils/helpers";
 
 const CityContext = createContext();
 
@@ -8,7 +10,9 @@ export const CityProvider = ({ children }) => {
   const [cities, useCities] = useState(data.cities);
 
   // set selected data for initialization
-  const [selectedCityId, setSelectedCityId] = useState("738647");
+  const [selectedCityId, setSelectedCityId] = useState(
+    data.cities[getRandom(data.cities.length)].value
+  );
 
   const values = {
     cities,

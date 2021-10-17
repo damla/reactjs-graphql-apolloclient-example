@@ -1,5 +1,5 @@
 import React from "react";
-import { spliceName, kelvinToCelcius } from "../../utils/helpers";
+import { getCurrentDay, splitName, kelvinToCelcius } from "../../utils/helpers";
 import { useQuery } from "@apollo/client";
 import { CITY_QUERY } from "./queries";
 
@@ -21,7 +21,10 @@ export default function WeatherCard({ selectedCityId }) {
 
   return (
     <div>
-      {spliceName(name)} | {description} | {icon} | {kelvinToCelcius(actual)}
+      <h1>{getCurrentDay()}</h1>
+      <p>
+        {splitName(name)} | {description} | {icon} | {kelvinToCelcius(actual)}
+      </p>
     </div>
   );
 }
