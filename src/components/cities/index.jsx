@@ -1,16 +1,19 @@
-import { data } from "../../utils/cities.js";
 import { Dropdown } from "reactjs-dropdown-component";
+import { useCities } from "../../contexts/CityContext";
 
 export default function Cities() {
-  let onChange = (item, name) => {
-    console.log(item, name);
+  const { cities, selectedCityId, setSelectedCityId } = useCities();
+
+  let onChange = ({ value }) => {
+    setSelectedCityId(value);
   };
+
   return (
     <Dropdown
       name="location"
       title="Select location"
-      list={data.cities}
-      select={{ value: "325361" }}
+      list={cities}
+      select={{ value: selectedCityId }}
       onChange={onChange}
       styles={{
         wrapper: { width: "170px", fontSize: "1rem" },
