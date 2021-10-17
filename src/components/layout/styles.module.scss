@@ -1,7 +1,32 @@
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   height: 100vh;
   width: 100vw;
   background-color: #282c34;
+}
+
+.footer {
+  height: 4vh;
+  padding: 2px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  background-color: #20232a;
+  font-size: small;
+  color: #cbd1ff;
+
+  a:visited {
+    color: #cbd1ff;
+  }
+
+  a:hover {
+    color: #a4adf6;
+  }
 }

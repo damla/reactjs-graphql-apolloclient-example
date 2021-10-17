@@ -4,7 +4,7 @@ import Layout from "../../components/layout";
 export default function Error404() {
   return (
     <Layout>
-      <Container>Error</Container>
+      <Container>404 Error! Page not found :(</Container>
     </Layout>
   );
 }
