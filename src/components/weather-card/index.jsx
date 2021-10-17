@@ -1,5 +1,5 @@
 import React from "react";
-import { KelvinToCelcius } from "../../utils/helpers";
+import { spliceName, kelvinToCelcius } from "../../utils/helpers";
 import { useQuery } from "@apollo/client";
 import { CITY_QUERY } from "./queries";
 
@@ -13,7 +13,6 @@ export default function WeatherCard({ selectedCityId }) {
 
   const {
     name,
-    country,
     weather: {
       summary: { description, icon },
       temperature: { actual },
@@ -22,7 +21,7 @@ export default function WeatherCard({ selectedCityId }) {
 
   return (
     <div>
-      {name} {country} {description} {icon} {KelvinToCelcius(actual)}
+      {spliceName(name)} | {description} | {icon} | {kelvinToCelcius(actual)}
     </div>
   );
 }
