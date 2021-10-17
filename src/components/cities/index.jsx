@@ -7,7 +7,12 @@ export default function Cities() {
 
   // custom dropdown styles
   const dropDownStyles = {
-    wrapper: { width: "170px", fontSize: "1rem" },
+    wrapper: { width: "300px", fontSize: "1rem" },
+    header: {
+      borderRadius: "0",
+      border: "unset",
+      borderBottom: "1px solid #e0dddd",
+    },
     headerTitle: { margin: "2px 10px", marginRight: "20px" },
     list: { fontWeight: "300" },
     listItem: { fontSize: "0.9rem" },

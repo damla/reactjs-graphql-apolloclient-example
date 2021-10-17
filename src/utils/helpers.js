@@ -23,3 +23,13 @@ export const kelvinToCelcius = (kelvin) =>
 
 // created to select random index from an array
 export const getRandom = (val) => Math.floor(Math.random() * val);
+
+// to capitalize every word's first letter in a sentence
+export const upperCase = (sentence) => {
+  var splitStr = sentence.toLowerCase().split(" ");
+  for (var i = 0; i < splitStr.length; i++) {
+    splitStr[i] =
+      splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+  }
+  return splitStr.join(" ");
+};
